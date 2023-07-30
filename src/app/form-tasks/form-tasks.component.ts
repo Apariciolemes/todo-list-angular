@@ -13,5 +13,6 @@ export class FormTasksComponent {
 
   createTask() {
     this.emitCreateTask.emit(this.inputValue.value);
+    this.inputValue.setValue('')
   }
 }
