@@ -1,0 +1,11 @@
+<ul>
+    <app-form-tasks (emitCreateTask)="createTask($event)" />
+    <div style="margin: 20px 0"></div>
+    <li *ngFor="let task of tasks;">
+        {{ task }}
+        <app-custom-button 
+            (eventEmitButton)="removeTask(task)" 
+            customLabel="remove"
+        />
+    </li>
+</ul>
