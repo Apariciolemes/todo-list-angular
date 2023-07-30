@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ListTasksComponent {
 
-  public tasks: any = ['Neto', 'João', 'Pedro']
+  public tasks: Array<string> = ['Neto', 'João', 'Pedro']
 
   removeTask(task: string) {
     const index = this.tasks.indexOf(task)
@@ -15,8 +15,6 @@ export class ListTasksComponent {
   }
 
   createTask(newTask: string) {
-    console.log('valor do newTask', newTask)
-
     this.tasks.push(newTask)
   }
 }
